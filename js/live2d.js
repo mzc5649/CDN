@@ -1,0 +1,17 @@
+document.writeln("<!--    live2d-->");
+document.writeln("	    <div id=\'landlord\'>");
+document.writeln("	        <div class=\'message\' style=\'opacity:0\'></div>");
+document.writeln("	        <canvas id=\'live2d\' width=\'280\' height=\'310\' class=\'live2d\'></canvas>");
+document.writeln("	        <div class=\'hide-button\'>隐藏</div>");
+document.writeln("	    </div>");
+document.writeln("	    <script type=\'text/javascript\'>");
+document.writeln("	        var message_Path = \'/blog/live2d/\'");
+document.writeln("	        var home_Path = \'http://handsomemzc.cn/blog/blog/\'  //此处修改为你的域名，必须带斜杠");
+document.writeln("	    </script>");
+document.writeln("	    <script type=\'text/javascript\' th:src=\'@{/live2d/js/live2d.js}\' src=\'../static/live2d/js/live2d.js\'></script>");
+document.writeln("	    <script type=\'text/javascript\' th:src=\'@{/live2d/js/message.js}\' src=\'../static/live2d/js/message.js\'></script>");
+document.writeln("	    <script type=\'text/javascript\'>");
+document.writeln("			var array=new Array(\'/blog/live2d/model/xiaomai/13.json\',\'/blog/live2d/model/tia/model.json\',\'/blog/live2d/model/remu/11.json\');");
+document.writeln("			var num=Math.floor(Math.random()*3); ");
+document.writeln("	        loadlive2d(\'live2d\',array[num]);");
+document.writeln("	    </script>");
